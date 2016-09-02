@@ -88,6 +88,7 @@ var AIRHORN *SoundCollection = &SoundCollection{
 		createSound("spam", 800, 0),
 		createSound("tripletap", 800, 250),
 		createSound("fourtap", 800, 250),
+		createSound("sad", 800, 250),
 		createSound("distant", 500, 250),
 		createSound("echo", 500, 250),
 		createSound("clownfull", 250, 250),
@@ -119,6 +120,7 @@ var CENA *SoundCollection = &SoundCollection{
 	Commands: []string{
 		"!johncena",
 		"!cena",
+		"!jc",
 	},
 	Sounds: []*Sound{
 		createSound("airhorn", 1, 250),
@@ -147,6 +149,7 @@ var ETHAN *SoundCollection = &SoundCollection{
 		createSound("echo", 100, 250),
 		createSound("high", 100, 250),
 		createSound("slowandlow", 100, 250),
+		createSound("fast", 100, 250),
 		createSound("cuts", 30, 250),
 		createSound("beat", 30, 250),
 		createSound("sodiepop", 1, 250),
@@ -180,6 +183,57 @@ var BIRTHDAY *SoundCollection = &SoundCollection{
 	},
 }
 
+var HAPPY *SoundCollection = &SoundCollection{
+	Prefix: "happy",
+	Commands: []string{
+		"!happy",
+		"!reacthappy",
+		"!h",
+	},
+	Sounds: []*Sound{
+		createSound("bravo", 500, 250),
+		createSound("tada", 500, 250),
+		createSound("wow", 500, 250),
+		createSound("haha", 500, 250),
+		createSound("nice", 500, 250),
+	},
+}
+
+var UNHAPPY *SoundCollection = &SoundCollection{
+	Prefix: "unhappy",
+	Commands: []string{
+		"!unhappy",
+		"!reactunhappy",
+		"!uh",
+	},
+	Sounds: []*Sound{
+		createSound("awfuck", 500, 250),
+		createSound("cry", 250, 250),
+	},
+}
+
+var REACTION *SoundCollection = &SoundCollection{
+	Prefix: "reaction",
+	Commands: []string{
+		"!reaction",
+		"!react",
+		"!r",
+	},
+	Sounds: []*Sound{
+		createSound("awfuck", 500, 250),
+		createSound("bravo", 500, 250),
+		createSound("tada", 500, 250),
+		createSound("wow", 500, 250),
+		createSound("nice", 500, 250),
+		createSound("haha", 400, 250),
+		createSound("kazooh", 400, 250),
+		createSound("loud", 300, 250),
+		createSound("trolol", 200, 250),
+		createSound("alluh", 15, 250),
+	},
+}
+
+/*
 var WOW *SoundCollection = &SoundCollection{
 	Prefix: "wow",
 	Commands: []string{
@@ -189,7 +243,7 @@ var WOW *SoundCollection = &SoundCollection{
 	Sounds: []*Sound{
 		createSound("thatscool", 50, 250),
 	},
-}
+*/
 
 var COLLECTIONS []*SoundCollection = []*SoundCollection{
 	AIRHORN,
@@ -198,7 +252,10 @@ var COLLECTIONS []*SoundCollection = []*SoundCollection{
 	ETHAN,
 	COW,
 	BIRTHDAY,
-	WOW,
+	HAPPY,
+	UNHAPPY,
+	REACTION,
+	//WOW,
 }
 
 // Create a Sound struct
